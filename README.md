@@ -1,6 +1,6 @@
 ## docker-lcd4linux
 
-A dockerfile containing lcd4linx and serdisplib for use with various LCD-displays.  
+A dockerfile containing [lcd4linux](https://lcd4linux.bulix.org/) and [serdisplib](http://serdisplib.sourceforge.net/) for use with various LCD-displays.  
 
 ### Features
 
@@ -25,8 +25,8 @@ services:
   driver:
     image: kaergel/lcd4linux
     volumes:
-      - ./lcd4linux.conf:/etc/lcd4linux.conf
-      - ./get_measuring_value.py:/usr/lib/python2.7/site-packages/get_measuring_value.py
+      - ./lcd4linux.conf:/lcd4linux.conf
+      - ./get_measuring_value.py:/get_measuring_value.py
       - /etc/hostname:/etc/sysname
     restart: always
     environment:

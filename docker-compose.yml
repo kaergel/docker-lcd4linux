@@ -2,7 +2,7 @@ version: '3'
 services:
 
   driver:
-    image: kaergel/lcd4linux
+    image: kaergel/docker-lcd4linux
     volumes:
       - ./lcd4linux.conf:/lcd4linux.conf
       - ./get_measuring_value.py:/get_measuring_value.py
