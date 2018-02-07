@@ -1,6 +1,7 @@
 #!/bin/bash
-
-pip install $PYTHONPACKAGES
+for PACKAGE in $PYTHONPACKAGES; do
+pip install $PACKAGE
+done
 cp -v /lcd4linux.conf /etc/lcd4linux.conf
 chown -v root:root /etc/lcd4linux.conf
 chmod -v 0600 /etc/lcd4linux.conf
